@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPM 2026 COUNTDOWN — SMK Tun Telanai</title>
+<style>
+:root{
+  --navy:#10243e;
+  --gold:#d7b56d;
+  --white:#fff;
+  --glass:rgba(255,255,255,.91);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--white);
+  background:
+    linear-gradient(rgba(5,18,33,.60),rgba(5,18,33,.72)),
+    url("background-ubk.jpg") center/cover fixed no-repeat;
+}
+.wrap{min-height:100vh;padding:28px 16px 36px;display:flex;justify-content:center}
+.container{width:min(1050px,100%)}
+.header{text-align:center;text-shadow:0 2px 8px #000}
+.badge{
+  display:inline-block;padding:7px 16px;border-radius:999px;
+  background:rgba(215,181,109,.95);color:#17263b;font-weight:700;
+  letter-spacing:1px;font-size:.82rem
+}
+h1{font-size:clamp(2rem,6vw,4.4rem);margin:14px 0 4px;letter-spacing:2px}
+.school{font-size:clamp(1rem,3vw,1.35rem);font-weight:700}
+.ubk{margin-top:6px;color:#f7dfad;font-weight:600}
+.count-card{
+  margin:28px auto 18px;background:rgba(8,22,39,.78);
+  border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(7px);
+  border-radius:24px;padding:25px 18px;max-width:920px;
+  box-shadow:0 15px 50px rgba(0,0,0,.35)
+}
+.label{text-align:center;text-transform:uppercase;letter-spacing:2px;font-size:.9rem;color:#f4d99a}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
+.unit{
+  background:rgba(255,255,255,.1);border-radius:16px;padding:18px 8px;text-align:center;
+  border:1px solid rgba(255,255,255,.12)
+}
+.num{font-size:clamp(2rem,7vw,4.2rem);font-weight:800;line-height:1}
+.unit span{display:block;margin-top:8px;font-size:.78rem;letter-spacing:1.2px;color:#e9edf3}
+.quote{
+  max-width:920px;margin:18px auto;background:var(--glass);color:var(--navy);
+  border-left:6px solid var(--gold);border-radius:16px;padding:20px 22px;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);text-align:center
+}
+.quote small{display:block;margin-top:10px;font-weight:700;color:#68758a}
+.section{
+  max-width:920px;margin:18px auto;background:rgba(255,255,255,.94);
+  color:var(--navy);border-radius:20px;padding:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.22)
+}
+.section h2{margin:0 0 14px;text-align:center;font-size:1.25rem}
+.timeline{display:grid;gap:10px}
+.event{
+  display:flex;gap:14px;align-items:center;padding:13px 14px;
+  border-radius:13px;background:#f3f5f7;border:1px solid #e2e7ec
+}
+.date{min-width:135px;font-weight:800;color:#9a742b}
+.name{font-weight:700}
+.note{font-size:.82rem;color:#68758a;margin-top:3px}
+.footer{text-align:center;margin-top:18px;font-size:.85rem;text-shadow:0 1px 5px #000}
+@media(max-width:650px){
+  .countdown{grid-template-columns:repeat(2,1fr)}
+  .event{display:block}.date{margin-bottom:5px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="container">
+  <header class="header">
+    <div class="badge">UNIT BIMBINGAN DAN KAUNSELING</div>
+    <h1>SPM 2026 COUNTDOWN</h1>
+    <div class="school">SMK TUN TELANAI</div>
+    <div class="ubk">Anjung Citra Harmoni</div>
+  </header>
+
+  <section class="count-card">
+    <div class="label">Menuju permulaan SPM 2026</div>
+    <div class="countdown">
+      <div class="unit"><div id="days" class="num">--</div><span>HARI</span></div>
+      <div class="unit"><div id="hours" class="num">--</div><span>JAM</span></div>
+      <div class="unit"><div id="minutes" class="num">--</div><span>MINIT</span></div>
+      <div class="unit"><div id="seconds" class="num">--</div><span>SAAT</span></div>
+    </div>
+  </section>
+
+  <section class="quote">
+    <div id="quote" style="font-size:1.15rem;font-weight:800"></div>
+    <small>— Unit Bimbingan dan Kaunseling, SMK Tun Telanai</small>
+  </section>
+
+  <section class="section">
+    <h2>📅 TARIKH PENTING SPM 2026</h2>
+    <div class="timeline">
+      <div class="event"><div class="date">26–29 Okt 2026</div><div><div class="name">Ujian Bertutur Bahasa Melayu</div><div class="note">Kertas 3</div></div></div>
+      <div class="event"><div class="date">2–5 Nov 2026</div><div><div class="name">Ujian Bertutur Bahasa Inggeris</div><div class="note">Kertas 3</div></div></div>
+      <div class="event"><div class="date">16–18 Nov 2026</div><div><div class="name">Ujian Amali Sains</div><div class="note">Fizik, Kimia, Biologi / Sains Tambahan</div></div></div>
+      <div class="event"><div class="date">23 Nov 2026</div><div><div class="name">Peperiksaan Bertulis Bermula</div><div class="note">Termasuk Ujian Mendengar Bahasa Melayu</div></div></div>
+      <div class="event"><div class="date">24 Nov 2026</div><div><div class="name">Ujian Mendengar Bahasa Inggeris</div><div class="note">Kertas 4</div></div></div>
+      <div class="event"><div class="date">23 Nov–17 Dis 2026</div><div><div class="name">Peperiksaan Bertulis SPM 2026</div><div class="note">Jadual penuh mengikut mata pelajaran</div></div></div>
+    </div>
+  </section>
+
+  <div class="footer">“Terus melangkah. Satu hari, satu usaha, satu kemajuan.”</div>
+</div>
+</div>
+
+<script>
+const examStart = new Date("2026-10-26T00:00:00+08:00").getTime();
+const quotes = [
+ "Jangan tunggu semangat datang. Mulakan dahulu, semangat akan menyusul.",
+ "Sedikit usaha setiap hari akan menjadi pencapaian besar suatu hari nanti.",
+ "Tidak perlu menjadi sempurna. Teruskan berusaha dan jangan berhenti.",
+ "SPM bukan tentang siapa paling cepat, tetapi tentang usaha yang konsisten.",
+ "Percaya pada usaha sendiri. Kamu lebih mampu daripada yang kamu sangka.",
+ "Hari ini ialah peluang untuk menjadi lebih baik daripada semalam.",
+ "Fokus pada apa yang boleh kamu lakukan hari ini.",
+ "Satu soalan yang kamu fahami hari ini ialah satu langkah ke hadapan.",
+ "Rehat apabila perlu, kemudian bangkit dan teruskan perjuangan.",
+ "Impian memerlukan usaha. Jadikan setiap hari lebih bermakna."
+];
+
+function updateCountdown(){
+  const now = Date.now();
+  let diff = examStart - now;
+  if(diff < 0) diff = 0;
+  const d = Math.floor(diff/86400000);
+  const h = Math.floor(diff%86400000/3600000);
+  const m = Math.floor(diff%3600000/60000);
+  const s = Math.floor(diff%60000/1000);
+  document.getElementById("days").textContent=d;
+  document.getElementById("hours").textContent=String(h).padStart(2,"0");
+  document.getElementById("minutes").textContent=String(m).padStart(2,"0");
+  document.getElementById("seconds").textContent=String(s).padStart(2,"0");
+}
+function dailyQuote(){
+  const day = Math.floor(new Date().setHours(0,0,0,0)/86400000);
+  document.getElementById("quote").textContent = quotes[((day % quotes.length)+quotes.length)%quotes.length];
+}
+updateCountdown(); dailyQuote(); setInterval(updateCountdown,1000);
+</script>
+</body>
+</html>
