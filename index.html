@@ -3,119 +3,161 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SPM 2026 COUNTDOWN — SMK Tun Telanai</title>
+<meta name="theme-color" content="#10243e">
+<title>SPM 2026 COUNTDOWN — UBK SMK Tun Telanai</title>
 <style>
 :root{
-  --navy:#10243e;
-  --gold:#d7b56d;
-  --white:#fff;
-  --glass:rgba(255,255,255,.91);
+  --navy:#10243e; --navy2:#071629; --gold:#d7b56d; --gold2:#f4d99a;
+  --white:#fff; --glass:rgba(255,255,255,.93); --muted:#657287;
+  --line:#e2e7ec; --soft:#f4f6f8; --green:#2f7d5a;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-  margin:0;
-  min-height:100vh;
-  font-family:Arial,Helvetica,sans-serif;
-  color:var(--white);
-  background:
-    linear-gradient(rgba(5,18,33,.60),rgba(5,18,33,.72)),
-    url("background-ubk.jpg") center/cover fixed no-repeat;
+  margin:0; min-height:100vh; font-family:Arial,Helvetica,sans-serif; color:var(--white);
+  background:linear-gradient(rgba(5,18,33,.62),rgba(5,18,33,.78)),url("background-ubk.jpg") center/cover fixed no-repeat;
 }
-.wrap{min-height:100vh;padding:28px 16px 36px;display:flex;justify-content:center}
-.container{width:min(1050px,100%)}
+.wrap{min-height:100vh;padding:22px 14px 38px;display:flex;justify-content:center}
+.container{width:min(1080px,100%)}
 .header{text-align:center;text-shadow:0 2px 8px #000}
-.badge{
-  display:inline-block;padding:7px 16px;border-radius:999px;
-  background:rgba(215,181,109,.95);color:#17263b;font-weight:700;
-  letter-spacing:1px;font-size:.82rem
-}
-h1{font-size:clamp(2rem,6vw,4.4rem);margin:14px 0 4px;letter-spacing:2px}
-.school{font-size:clamp(1rem,3vw,1.35rem);font-weight:700}
-.ubk{margin-top:6px;color:#f7dfad;font-weight:600}
+.identity{display:inline-block;padding:9px 18px;border-radius:999px;background:rgba(215,181,109,.96);color:#17263b;font-weight:800;letter-spacing:.8px;font-size:clamp(.78rem,2.5vw,.98rem);line-height:1.35}
+.identity .schoolline{display:block}
+h1{font-size:clamp(2.25rem,7vw,4.6rem);margin:15px 0 3px;letter-spacing:2px;line-height:1.05}
+.today{margin-top:9px;font-weight:800;color:#f7dfad;letter-spacing:.5px;font-size:.96rem}
 .count-card{
-  margin:28px auto 18px;background:rgba(8,22,39,.78);
-  border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(7px);
-  border-radius:24px;padding:25px 18px;max-width:920px;
+  margin:26px auto 18px;background:rgba(8,22,39,.80);border:1px solid rgba(255,255,255,.2);
+  backdrop-filter:blur(7px);border-radius:26px;padding:24px 16px;max-width:940px;
   box-shadow:0 15px 50px rgba(0,0,0,.35)
 }
-.label{text-align:center;text-transform:uppercase;letter-spacing:2px;font-size:.9rem;color:#f4d99a}
+.label{text-align:center;text-transform:uppercase;letter-spacing:2px;font-size:.92rem;color:var(--gold2);font-weight:700}
 .countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
-.unit{
-  background:rgba(255,255,255,.1);border-radius:16px;padding:18px 8px;text-align:center;
-  border:1px solid rgba(255,255,255,.12)
-}
+.unit{background:rgba(255,255,255,.1);border-radius:17px;padding:18px 8px;text-align:center;border:1px solid rgba(255,255,255,.12)}
 .num{font-size:clamp(2rem,7vw,4.2rem);font-weight:800;line-height:1}
-.unit span{display:block;margin-top:8px;font-size:.78rem;letter-spacing:1.2px;color:#e9edf3}
-.quote{
-  max-width:920px;margin:18px auto;background:var(--glass);color:var(--navy);
-  border-left:6px solid var(--gold);border-radius:16px;padding:20px 22px;
-  box-shadow:0 10px 30px rgba(0,0,0,.25);text-align:center
-}
+.unit span{display:block;margin-top:8px;font-size:.76rem;letter-spacing:1.2px;color:#e9edf3}
+.quote{max-width:940px;margin:18px auto;background:var(--glass);color:var(--navy);border-left:6px solid var(--gold);border-radius:17px;padding:20px 22px;box-shadow:0 10px 30px rgba(0,0,0,.25);text-align:center}
+.quoteText{font-size:clamp(1rem,3vw,1.2rem);font-weight:800;line-height:1.45}
 .quote small{display:block;margin-top:10px;font-weight:700;color:#68758a}
-.section{
-  max-width:920px;margin:18px auto;background:rgba(255,255,255,.94);
-  color:var(--navy);border-radius:20px;padding:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,.22)
-}
-.section h2{margin:0 0 14px;text-align:center;font-size:1.25rem}
+.section{max-width:940px;margin:18px auto;background:rgba(255,255,255,.95);color:var(--navy);border-radius:22px;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,.22)}
+.section h2{margin:0 0 14px;text-align:center;font-size:1.3rem}
+.next{border:2px solid rgba(215,181,109,.55);background:linear-gradient(135deg,#fff,#f6f8fa);border-radius:18px;padding:17px}
+.nextTop{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.nextName{font-size:1.15rem;font-weight:900}
+.nextMeta{color:var(--muted);font-size:.88rem;margin-top:4px}
+.nextCountdown{font-weight:900;color:#9a742b;font-size:1rem}
+.searchRow{display:flex;gap:10px;margin:16px 0 12px;flex-wrap:wrap}
+.search{flex:1;min-width:220px;padding:13px 14px;border:1px solid #d8dee6;border-radius:12px;font-size:1rem;outline:none}
+.search:focus{border-color:var(--gold)}
+.filters{display:flex;gap:7px;flex-wrap:wrap}
+.filter{border:1px solid #d8dee6;background:#fff;color:var(--navy);padding:9px 12px;border-radius:999px;font-weight:700;cursor:pointer}
+.filter.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.subjectGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.subject{border:1px solid var(--line);border-radius:17px;background:#fff;overflow:hidden;box-shadow:0 4px 14px rgba(16,36,62,.06)}
+.subjectHead{padding:15px;display:flex;align-items:flex-start;gap:11px}
+.icon{font-size:1.65rem;line-height:1}
+.subjectName{font-weight:900;font-size:1.02rem;line-height:1.25}
+.cat{font-size:.74rem;color:var(--muted);margin-top:4px}
+.subjectBody{padding:0 15px 15px}
+.nextExam{background:var(--soft);border-radius:12px;padding:11px 12px}
+.nextExam .date{font-weight:900;color:#9a742b;font-size:.84rem}
+.nextExam .eventLabel{font-weight:800;margin-top:4px;font-size:.9rem;line-height:1.35}
+.timer{margin-top:9px;font-weight:900;color:var(--navy);font-size:.92rem}
+details{border-top:1px solid var(--line);margin-top:12px;padding-top:11px}
+summary{cursor:pointer;font-weight:800;color:#31506f}
+.detailItem{padding:9px 0;border-bottom:1px dashed #e0e4e9}
+.detailItem:last-child{border-bottom:0}
+.detailDate{font-weight:800;color:#9a742b;font-size:.82rem}
+.detailLabel{font-size:.88rem;margin-top:2px;line-height:1.35}
+.empty{text-align:center;padding:22px;color:var(--muted);grid-column:1/-1}
 .timeline{display:grid;gap:10px}
-.event{
-  display:flex;gap:14px;align-items:center;padding:13px 14px;
-  border-radius:13px;background:#f3f5f7;border:1px solid #e2e7ec
-}
+.event{display:flex;gap:14px;align-items:center;padding:13px 14px;border-radius:13px;background:#f3f5f7;border:1px solid #e2e7ec}
 .date{min-width:135px;font-weight:800;color:#9a742b}
 .name{font-weight:700}
 .note{font-size:.82rem;color:#68758a;margin-top:3px}
+.sourceNote{font-size:.78rem;color:#68758a;text-align:center;margin-top:14px;line-height:1.45}
 .footer{text-align:center;margin-top:18px;font-size:.85rem;text-shadow:0 1px 5px #000}
+@media(max-width:720px){
+  .subjectGrid{grid-template-columns:1fr}
+}
 @media(max-width:650px){
+  .wrap{padding:17px 10px 30px}
   .countdown{grid-template-columns:repeat(2,1fr)}
-  .event{display:block}.date{margin-bottom:5px}
+  .event{display:block} .date{margin-bottom:5px}
+  .section{padding:15px;border-radius:18px}
+  .count-card{padding:21px 12px;border-radius:22px}
+  .identity{max-width:94%;padding:8px 13px}
+  h1{font-size:clamp(2.05rem,11vw,3.5rem)}
 }
 </style>
 </head>
 <body>
-<div class="wrap">
-<div class="container">
-  <header class="header">
-    <div class="badge">UNIT BIMBINGAN DAN KAUNSELING</div>
-    <h1>SPM 2026 COUNTDOWN</h1>
-    <div class="school">SMK TUN TELANAI</div>
-    <div id="today" style="margin-top:10px;font-weight:700;color:#f7dfad;letter-spacing:.6px"></div>
-  </header>
+<div class="wrap"><div class="container">
+<header class="header">
+  <div class="identity">UNIT BIMBINGAN DAN KAUNSELING<span class="schoolline">SMK TUN TELANAI</span></div>
+  <h1>SPM 2026 COUNTDOWN</h1>
+  <div id="today" class="today"></div>
+</header>
 
-  <section class="count-card">
-    <div class="label">Menuju permulaan SPM 2026</div>
-    <div class="countdown">
-      <div class="unit"><div id="days" class="num">--</div><span>HARI</span></div>
-      <div class="unit"><div id="hours" class="num">--</div><span>JAM</span></div>
-      <div class="unit"><div id="minutes" class="num">--</div><span>MINIT</span></div>
-      <div class="unit"><div id="seconds" class="num">--</div><span>SAAT</span></div>
+<section class="count-card">
+  <div class="label">Menuju permulaan SPM 2026</div>
+  <div class="countdown">
+    <div class="unit"><div id="days" class="num">--</div><span>HARI</span></div>
+    <div class="unit"><div id="hours" class="num">--</div><span>JAM</span></div>
+    <div class="unit"><div id="minutes" class="num">--</div><span>MINIT</span></div>
+    <div class="unit"><div id="seconds" class="num">--</div><span>SAAT</span></div>
+  </div>
+</section>
+
+<section class="quote">
+  <div id="quote" class="quoteText"></div>
+  <small>— Unit Bimbingan dan Kaunseling, SMK Tun Telanai</small>
+</section>
+
+<section class="section">
+  <h2>🎯 PEPERIKSAAN SETERUSNYA</h2>
+  <div id="nextExam" class="next"></div>
+</section>
+
+<section class="section" id="subjectsSection">
+  <h2>📚 COUNTDOWN MENGIKUT SUBJEK</h2>
+  <div class="searchRow">
+    <input id="search" class="search" type="search" placeholder="🔎 Cari subjek..." aria-label="Cari subjek">
+    <div class="filters" id="filters">
+      <button class="filter active" data-filter="Semua">Semua</button>
+      <button class="filter" data-filter="Bahasa">Bahasa</button>
+      <button class="filter" data-filter="Matematik">Matematik</button>
+      <button class="filter" data-filter="Sains">Sains</button>
+      <button class="filter" data-filter="Agama">Agama</button>
+      <button class="filter" data-filter="Kemanusiaan">Kemanusiaan</button>
+      <button class="filter" data-filter="TVET">TVET</button>
+      <button class="filter" data-filter="Lain-lain">Lain-lain</button>
     </div>
-  </section>
+  </div>
+  <div id="subjectGrid" class="subjectGrid"></div>
+  <div class="sourceNote">
+    Data countdown disusun berdasarkan <b>Jadual Waktu SPM 2026</b> yang dimuat naik oleh UBK.
+    Entri yang ditanda garis/coret dalam jadual sumber tidak dimasukkan sebagai peperiksaan aktif.
+  </div>
+</section>
 
-  <section class="quote">
-    <div id="quote" style="font-size:1.15rem;font-weight:800"></div>
-    <small>— Unit Bimbingan dan Kaunseling, SMK Tun Telanai</small>
-  </section>
+<section class="section">
+  <h2>📅 TARIKH PENTING SPM 2026</h2>
+  <div class="timeline">
+    <div class="event"><div class="date">26–29 Okt 2026</div><div><div class="name">Ujian Bertutur Bahasa Melayu</div><div class="note">Kertas 3</div></div></div>
+    <div class="event"><div class="date">2–5 Nov 2026</div><div><div class="name">Ujian Bertutur Bahasa Inggeris</div><div class="note">Kertas 3</div></div></div>
+    <div class="event"><div class="date">16–18 Nov 2026</div><div><div class="name">Ujian Amali Sains</div><div class="note">Fizik, Kimia dan Biologi</div></div></div>
+    <div class="event"><div class="date">23 Nov 2026</div><div><div class="name">Peperiksaan Bertulis Bermula</div><div class="note">Bahasa Melayu dan Ujian Mendengar Bahasa Melayu</div></div></div>
+    <div class="event"><div class="date">24 Nov 2026</div><div><div class="name">Ujian Mendengar Bahasa Inggeris</div><div class="note">Kertas 4</div></div></div>
+    <div class="event"><div class="date">23 Nov–17 Dis 2026</div><div><div class="name">Peperiksaan Bertulis SPM 2026</div><div class="note">Jadual mengikut mata pelajaran</div></div></div>
+  </div>
+  <div class="sourceNote">Sumber data: JWP SPM 2026, dokumen bertarikh 18 Ogos 2026.</div>
+</section>
 
-  <section class="section">
-    <h2>📅 TARIKH PENTING SPM 2026</h2>
-    <div class="timeline">
-      <div class="event"><div class="date">26–29 Okt 2026</div><div><div class="name">Ujian Bertutur Bahasa Melayu</div><div class="note">Kertas 3</div></div></div>
-      <div class="event"><div class="date">2–5 Nov 2026</div><div><div class="name">Ujian Bertutur Bahasa Inggeris</div><div class="note">Kertas 3</div></div></div>
-      <div class="event"><div class="date">16–18 Nov 2026</div><div><div class="name">Ujian Amali Sains</div><div class="note">Fizik, Kimia, Biologi / Sains Tambahan</div></div></div>
-      <div class="event"><div class="date">23 Nov 2026</div><div><div class="name">Peperiksaan Bertulis Bermula</div><div class="note">Termasuk Ujian Mendengar Bahasa Melayu</div></div></div>
-      <div class="event"><div class="date">24 Nov 2026</div><div><div class="name">Ujian Mendengar Bahasa Inggeris</div><div class="note">Kertas 4</div></div></div>
-      <div class="event"><div class="date">23 Nov–17 Dis 2026</div><div><div class="name">Peperiksaan Bertulis SPM 2026</div><div class="note">Jadual penuh mengikut mata pelajaran</div></div></div>
-    </div>
-  </section>
-
-  <div class="footer">“Terus melangkah. Satu hari, satu usaha, satu kemajuan.”</div>
-</div>
-</div>
+<div class="footer">“Terus melangkah. Satu hari, satu usaha, satu kemajuan.”</div>
+</div></div>
 
 <script>
 const examStart = new Date("2026-10-26T00:00:00+08:00").getTime();
+const subjects = [{"name": "Bahasa Melayu", "icon": "📘", "cat": "Bahasa", "default": "2026-10-26T08:00:00+08:00", "events": [{"dateLabel": "26–29 Okt 2026", "label": "Ujian Bertutur • Kertas 3", "start": "2026-10-26T08:00:00+08:00"}, {"dateLabel": "23 Nov 2026", "label": "Ujian Mendengar • Kertas 4 • 9:00 pagi–9:30 pagi", "start": "2026-11-23T09:00:00+08:00"}, {"dateLabel": "23 Nov 2026", "label": "Kertas 1 • 10:45 pagi–12:45 tengah hari", "start": "2026-11-23T10:45:00+08:00"}, {"dateLabel": "23 Nov 2026", "label": "Kertas 2 • 2:30 petang–5:00 petang", "start": "2026-11-23T14:30:00+08:00"}]}, {"name": "Bahasa Inggeris", "icon": "📗", "cat": "Bahasa", "default": "2026-11-02T08:00:00+08:00", "events": [{"dateLabel": "2–5 Nov 2026", "label": "Ujian Bertutur • Kertas 3", "start": "2026-11-02T08:00:00+08:00"}, {"dateLabel": "24 Nov 2026", "label": "Ujian Mendengar • Kertas 4 • 9:00 pagi–9:40 pagi", "start": "2026-11-24T09:00:00+08:00"}, {"dateLabel": "24 Nov 2026", "label": "Kertas 1 • 11:00 pagi–12:30 tengah hari", "start": "2026-11-24T11:00:00+08:00"}, {"dateLabel": "24 Nov 2026", "label": "Kertas 2 • 2:30 petang–4:00 petang", "start": "2026-11-24T14:30:00+08:00"}]}, {"name": "Pendidikan Islam", "icon": "🕌", "cat": "Agama", "default": "2026-11-25T08:15:00+08:00", "events": [{"dateLabel": "25 Nov 2026", "label": "Kertas 1 • 8:15 pagi–10:45 pagi", "start": "2026-11-25T08:15:00+08:00"}]}, {"name": "Matematik", "icon": "➗", "cat": "Matematik", "default": "2026-11-26T08:15:00+08:00", "events": [{"dateLabel": "26 Nov 2026", "label": "Kertas 1 • 8:15 pagi–9:45 pagi", "start": "2026-11-26T08:15:00+08:00"}, {"dateLabel": "26 Nov 2026", "label": "Kertas 2 • 10:45 pagi–1:15 tengah hari", "start": "2026-11-26T10:45:00+08:00"}]}, {"name": "Sejarah", "icon": "🏛️", "cat": "Kemanusiaan", "default": "2026-11-30T08:15:00+08:00", "events": [{"dateLabel": "30 Nov 2026", "label": "Kertas 1 • 8:15 pagi–9:15 pagi", "start": "2026-11-30T08:15:00+08:00"}, {"dateLabel": "30 Nov 2026", "label": "Kertas 2 • 10:30 pagi–1:00 tengah hari", "start": "2026-11-30T10:30:00+08:00"}]}, {"name": "Tasawwur Islam", "icon": "☪️", "cat": "Agama", "default": "2026-11-30T14:30:00+08:00", "events": [{"dateLabel": "30 Nov 2026", "label": "Kertas • 2:30 petang–5:00 petang", "start": "2026-11-30T14:30:00+08:00"}]}, {"name": "Pendidikan Seni Visual", "icon": "🎨", "cat": "Kreatif", "default": "2026-12-01T08:15:00+08:00", "events": [{"dateLabel": "1 Dis 2026", "label": "Ujian Melukis • Kertas 2 • 8:15 pagi–11:15 pagi", "start": "2026-12-01T08:15:00+08:00"}, {"dateLabel": "1 Dis 2026", "label": "Teori Seni • Kertas 1 • 12:00 tengah hari–1:00 tengah hari", "start": "2026-12-01T12:00:00+08:00"}]}, {"name": "Perniagaan", "icon": "💼", "cat": "Perniagaan", "default": "2026-12-02T08:15:00+08:00", "events": [{"dateLabel": "2 Dis 2026", "label": "Kertas 1 • 8:15 pagi–9:30 pagi", "start": "2026-12-02T08:15:00+08:00"}, {"dateLabel": "2 Dis 2026", "label": "Kertas 2 • 10:45 pagi–1:00 tengah hari", "start": "2026-12-02T10:45:00+08:00"}, {"dateLabel": "2 Dis 2026", "label": "Kertas 4 • 2:30 petang–5:00 petang", "start": "2026-12-02T14:30:00+08:00"}]}, {"name": "Biologi", "icon": "🧬", "cat": "Sains", "default": "2026-11-18T08:05:00+08:00", "events": [{"dateLabel": "18 Nov 2026", "label": "Ujian Amali Sains • Kertas 3 • 8:05–8:45 pagi (Sidang 1)", "start": "2026-11-18T08:05:00+08:00"}, {"dateLabel": "2 Dis 2026", "label": "Kertas 1 • 8:15 pagi–9:30 pagi", "start": "2026-12-02T08:15:00+08:00"}, {"dateLabel": "2 Dis 2026", "label": "Kertas 2 • 10:45 pagi–1:15 tengah hari", "start": "2026-12-02T10:45:00+08:00"}]}, {"name": "Sains", "icon": "🔬", "cat": "Sains", "default": "2026-12-03T08:15:00+08:00", "events": [{"dateLabel": "3 Dis 2026", "label": "Kertas 1 • 8:15 pagi–9:30 pagi", "start": "2026-12-03T08:15:00+08:00"}, {"dateLabel": "3 Dis 2026", "label": "Kertas 2 • 10:30 pagi–1:00 tengah hari", "start": "2026-12-03T10:30:00+08:00"}]}, {"name": "Fizik", "icon": "⚛️", "cat": "Sains", "default": "2026-11-16T08:05:00+08:00", "events": [{"dateLabel": "16 Nov 2026", "label": "Ujian Amali Sains • Kertas 3 • 8:05–8:45 pagi (Sidang 1)", "start": "2026-11-16T08:05:00+08:00"}, {"dateLabel": "3 Dis 2026", "label": "Kertas 1 • 8:15 pagi–9:30 pagi", "start": "2026-12-03T08:15:00+08:00"}, {"dateLabel": "3 Dis 2026", "label": "Kertas 2 • 10:30 pagi–1:00 tengah hari", "start": "2026-12-03T10:30:00+08:00"}]}, {"name": "Menservis Peralatan Penyejukan dan Penyamanan Udara", "icon": "❄️", "cat": "TVET", "default": "2026-12-07T14:30:00+08:00", "events": [{"dateLabel": "7 Dis 2026", "label": "Kertas 1 • 2:30 petang–4:30 petang", "start": "2026-12-07T14:30:00+08:00"}]}, {"name": "Grafik Komunikasi Teknikal", "icon": "📐", "cat": "TVET", "default": "2026-12-07T14:30:00+08:00", "events": [{"dateLabel": "7 Dis 2026", "label": "Kertas 1 • 2:30 petang–5:00 petang", "start": "2026-12-07T14:30:00+08:00"}]}, {"name": "Sains Komputer", "icon": "💻", "cat": "Teknologi", "default": "2026-12-10T14:30:00+08:00", "events": [{"dateLabel": "10 Dis 2026", "label": "Kertas 1 • 2:30 petang–5:00 petang", "start": "2026-12-10T14:30:00+08:00"}]}, {"name": "Prinsip Perakaunan", "icon": "🧾", "cat": "Perniagaan", "default": "2026-12-14T08:15:00+08:00", "events": [{"dateLabel": "14 Dis 2026", "label": "Kertas 1 • 8:15 pagi–9:30 pagi", "start": "2026-12-14T08:15:00+08:00"}, {"dateLabel": "14 Dis 2026", "label": "Kertas 2 • 10:45 pagi–1:15 tengah hari", "start": "2026-12-14T10:45:00+08:00"}, {"dateLabel": "14 Dis 2026", "label": "Kertas 4 • 2:30 petang–5:00 petang", "start": "2026-12-14T14:30:00+08:00"}]}, {"name": "Kimia", "icon": "🧪", "cat": "Sains", "default": "2026-11-17T08:05:00+08:00", "events": [{"dateLabel": "17 Nov 2026", "label": "Ujian Amali Sains • Kertas 3 • 8:05–8:45 pagi (Sidang 1)", "start": "2026-11-17T08:05:00+08:00"}, {"dateLabel": "15 Dis 2026", "label": "Kertas 1 • 8:15 pagi–9:30 pagi", "start": "2026-12-15T08:15:00+08:00"}, {"dateLabel": "15 Dis 2026", "label": "Kertas 2 • 10:45 pagi–1:15 tengah hari", "start": "2026-12-15T10:45:00+08:00"}]}, {"name": "Geografi", "icon": "🌍", "cat": "Kemanusiaan", "default": "2026-12-16T11:45:00+08:00", "events": [{"dateLabel": "16 Dis 2026", "label": "Kertas 1 • 11:45 pagi–1:00 tengah hari", "start": "2026-12-16T11:45:00+08:00"}, {"dateLabel": "16 Dis 2026", "label": "Kertas 2 • 2:30 petang–5:00 petang", "start": "2026-12-16T14:30:00+08:00"}]}, {"name": "Matematik Tambahan", "icon": "📐", "cat": "Matematik", "default": "2026-12-17T08:15:00+08:00", "events": [{"dateLabel": "17 Dis 2026", "label": "Kertas 1 • 8:15 pagi–10:15 pagi", "start": "2026-12-17T08:15:00+08:00"}, {"dateLabel": "17 Dis 2026", "label": "Kertas 2 • 2:30 petang–5:00 petang", "start": "2026-12-17T14:30:00+08:00"}]}];
 const quotes = [
  "Jangan tunggu semangat datang. Mulakan dahulu, semangat akan menyusul.",
  "Sedikit usaha setiap hari akan menjadi pencapaian besar suatu hari nanti.",
@@ -128,38 +170,91 @@ const quotes = [
  "Rehat apabila perlu, kemudian bangkit dan teruskan perjuangan.",
  "Impian memerlukan usaha. Jadikan setiap hari lebih bermakna."
 ];
+let activeFilter="Semua";
 
-function updateCountdown(){
-  const now = Date.now();
-  let diff = examStart - now;
-  if(diff < 0) diff = 0;
-  const d = Math.floor(diff/86400000);
-  const h = Math.floor(diff%86400000/3600000);
-  const m = Math.floor(diff%3600000/60000);
-  const s = Math.floor(diff%60000/1000);
-  document.getElementById("days").textContent=d;
-  document.getElementById("hours").textContent=String(h).padStart(2,"0");
-  document.getElementById("minutes").textContent=String(m).padStart(2,"0");
-  document.getElementById("seconds").textContent=String(s).padStart(2,"0");
+function parts(diff){
+  if(diff<=0) return {d:0,h:0,m:0,s:0};
+  return {
+    d:Math.floor(diff/86400000),
+    h:Math.floor(diff%86400000/3600000),
+    m:Math.floor(diff%3600000/60000),
+    s:Math.floor(diff%60000/1000)
+  };
 }
-function dailyQuote(){
-  const day = Math.floor(new Date().setHours(0,0,0,0)/86400000);
-  document.getElementById("quote").textContent = quotes[((day % quotes.length)+quotes.length)%quotes.length];
+function timerText(diff){
+  const p=parts(diff);
+  return `${p.d} hari ${String(p.h).padStart(2,"0")} jam ${String(p.m).padStart(2,"0")} min ${String(p.s).padStart(2,"0")} saat`;
+}
+function updateMainCountdown(){
+  const p=parts(examStart-Date.now());
+  document.getElementById("days").textContent=p.d;
+  document.getElementById("hours").textContent=String(p.h).padStart(2,"0");
+  document.getElementById("minutes").textContent=String(p.m).padStart(2,"0");
+  document.getElementById("seconds").textContent=String(p.s).padStart(2,"0");
 }
 function updateToday(){
-  const now = new Date();
-  const formatted = new Intl.DateTimeFormat("ms-MY", {
-    timeZone: "Asia/Kuala_Lumpur",
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-    year: "numeric"
-  }).format(now);
-  document.getElementById("today").textContent =
-    "📅 HARI INI: " + formatted.toUpperCase();
+  const formatted=new Intl.DateTimeFormat("ms-MY",{
+    timeZone:"Asia/Kuala_Lumpur",weekday:"long",day:"numeric",month:"long",year:"numeric"
+  }).format(new Date());
+  document.getElementById("today").textContent="📅 HARI INI: "+formatted.toUpperCase();
 }
-updateCountdown(); dailyQuote(); updateToday();
-setInterval(updateCountdown,1000);
+function dailyQuote(){
+  const day=Math.floor(new Date().setHours(0,0,0,0)/86400000);
+  document.getElementById("quote").textContent=quotes[((day%quotes.length)+quotes.length)%quotes.length];
+}
+function nextEvent(subject){
+  const now=Date.now();
+  const upcoming=subject.events.map((e,i)=>({...e,i,t:new Date(e.start).getTime()})).filter(e=>e.t>now).sort((a,b)=>a.t-b.t);
+  return upcoming[0] || null;
+}
+function overallNext(){
+  const all=[];
+  subjects.forEach(s=>s.events.forEach(e=>all.push({subject:s,e,t:new Date(e.start).getTime()})));
+  return all.filter(x=>x.t>Date.now()).sort((a,b)=>a.t-b.t)[0] || null;
+}
+function renderNext(){
+  const x=overallNext();
+  const box=document.getElementById("nextExam");
+  if(!x){box.innerHTML="<b>Semua peperiksaan dalam jadual ini telah selesai.</b>";return;}
+  const date=new Intl.DateTimeFormat("ms-MY",{timeZone:"Asia/Kuala_Lumpur",weekday:"long",day:"numeric",month:"long",year:"numeric"}).format(new Date(x.t));
+  box.innerHTML=`<div class="nextTop"><div><div class="nextName">${x.subject.icon} ${x.subject.name}</div><div class="nextMeta">${x.e.dateLabel} • ${x.e.label}</div></div><div id="overallTimer" class="nextCountdown">${timerText(x.t-Date.now())}</div></div>`;
+}
+function renderSubjects(){
+  const q=document.getElementById("search").value.trim().toLowerCase();
+  const grid=document.getElementById("subjectGrid");
+  const list=subjects.filter(s=>(activeFilter==="Semua" || s.cat===activeFilter || (activeFilter==="Lain-lain" && !["Bahasa","Matematik","Sains","Agama","Kemanusiaan","TVET"].includes(s.cat))) && s.name.toLowerCase().includes(q));
+  if(!list.length){grid.innerHTML='<div class="empty">Tiada subjek ditemui.</div>';return;}
+  grid.innerHTML=list.map((s,idx)=>{
+    const n=nextEvent(s);
+    const details=s.events.map(e=>`<div class="detailItem"><div class="detailDate">${e.dateLabel}</div><div class="detailLabel">${e.label}</div></div>`).join("");
+    return `<article class="subject">
+      <div class="subjectHead"><div class="icon">${s.icon}</div><div><div class="subjectName">${s.name}</div><div class="cat">${s.cat}</div></div></div>
+      <div class="subjectBody">
+        ${n ? `<div class="nextExam"><div class="date">Seterusnya • ${n.dateLabel}</div><div class="eventLabel">${n.label}</div><div class="timer" data-start="${n.start}">⏳ ${timerText(n.t-Date.now())}</div></div>` : `<div class="nextExam"><div class="eventLabel">Peperiksaan subjek ini telah selesai.</div></div>`}
+        <details><summary>Lihat semua kertas / komponen</summary>${details}</details>
+      </div>
+    </article>`;
+  }).join("");
+}
+function updateCardTimers(){
+  document.querySelectorAll(".timer[data-start]").forEach(el=>{
+    const t=new Date(el.dataset.start).getTime();
+    el.textContent="⏳ "+timerText(t-Date.now());
+  });
+  const x=overallNext();
+  const o=document.getElementById("overallTimer");
+  if(x && o) o.textContent=timerText(x.t-Date.now());
+}
+document.getElementById("search").addEventListener("input",renderSubjects);
+document.getElementById("filters").addEventListener("click",e=>{
+  if(!e.target.classList.contains("filter")) return;
+  activeFilter=e.target.dataset.filter;
+  document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));
+  e.target.classList.add("active");
+  renderSubjects();
+});
+updateMainCountdown();updateToday();dailyQuote();renderNext();renderSubjects();updateCardTimers();
+setInterval(()=>{updateMainCountdown();renderNext();renderSubjects();updateCardTimers();},1000);
 setInterval(updateToday,60000);
 </script>
 </body>
