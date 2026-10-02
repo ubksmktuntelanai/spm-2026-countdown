@@ -80,7 +80,7 @@ h1{font-size:clamp(2rem,6vw,4.4rem);margin:14px 0 4px;letter-spacing:2px}
     <div class="badge">UNIT BIMBINGAN DAN KAUNSELING</div>
     <h1>SPM 2026 COUNTDOWN</h1>
     <div class="school">SMK TUN TELANAI</div>
-    <div class="ubk">Anjung Citra Harmoni</div>
+    <div id="today" style="margin-top:10px;font-weight:700;color:#f7dfad;letter-spacing:.6px"></div>
   </header>
 
   <section class="count-card">
@@ -146,7 +146,21 @@ function dailyQuote(){
   const day = Math.floor(new Date().setHours(0,0,0,0)/86400000);
   document.getElementById("quote").textContent = quotes[((day % quotes.length)+quotes.length)%quotes.length];
 }
-updateCountdown(); dailyQuote(); setInterval(updateCountdown,1000);
+function updateToday(){
+  const now = new Date();
+  const formatted = new Intl.DateTimeFormat("ms-MY", {
+    timeZone: "Asia/Kuala_Lumpur",
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+  }).format(now);
+  document.getElementById("today").textContent =
+    "📅 HARI INI: " + formatted.toUpperCase();
+}
+updateCountdown(); dailyQuote(); updateToday();
+setInterval(updateCountdown,1000);
+setInterval(updateToday,60000);
 </script>
 </body>
 </html>
